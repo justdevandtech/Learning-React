@@ -11,14 +11,14 @@ class ReactCounter extends Component {
 
   Hanleclick = () => {
       this.setState(prevState => {
-          return {count: prevState.count}
+          return {count: prevState.count + 1};
       })
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.Hanleclick}>clicked time</button>
+        <button onClick={this.Hanleclick}>clicked {this.state.count} times</button>
       </div>
     );
   }
